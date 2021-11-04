@@ -3,14 +3,14 @@ kind: Deployment
 metadata:
   name: nginx-deployment
   labels:
-    app: nginx-deployment
+    app: nginx
 spec:
   replicas: 10
   template:
     metadata:
       name: nginx-deployment
       labels:
-        app: nginx-deployment
+        app: nginx
     spec:
       containers:
         - name: nginx-deployment
@@ -19,4 +19,4 @@ spec:
       restartPolicy: Always
   selector:
     matchLabels:
-      app: nginx-deployment
+      app: nginx
